@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.toy.interpreter.View.RunPrgController">
+   <children>
+      <Label layoutX="78.0" layoutY="41.0" text="Nr. of PrgStates">
+         <font>
+            <Font name="Roboto Light" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nrPrgStatesTextField" layoutX="46.0" layoutY="76.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="94.0" layoutY="157.0" text="Heap Table">
+         <font>
+            <Font name="Roboto Light" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="heapTableView" layoutX="43.0" layoutY="202.0" prefHeight="170.0" prefWidth="181.0">
+        <columns>
+          <TableColumn fx:id="addressHeapColumn" prefWidth="92.0" text="Address" />
+          <TableColumn fx:id="valueHeapColumn" prefWidth="88.0" text="Value" />
+        </columns>
+      </TableView>
+      <TableView fx:id="latchTableView" layoutX="311.0" layoutY="84.0" prefHeight="170.0" prefWidth="181.0">
+         <columns>
+            <TableColumn fx:id="locationLatchTableColumn" prefWidth="92.0" text="Location" />
+            <TableColumn fx:id="valueLatchTableColumn" prefWidth="88.0" text="Value" />
+         </columns>
+      </TableView>
+      <Label layoutX="120.0" layoutY="477.0" text="Out">
+         <font>
+            <Font name="Roboto Light" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="outListView" layoutX="43.0" layoutY="520.0" prefHeight="155.0" prefWidth="181.0" />
+      <Label layoutX="368.0" layoutY="303.0" text="File Table">
+         <font>
+            <Font name="Roboto Light" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="fileTableListView" layoutX="299.0" layoutY="340.0" prefHeight="170.0" prefWidth="205.0" />
+      <Label layoutX="671.0" layoutY="477.0" text="PrgState Identifier">
+         <font>
+            <Font name="Roboto Light" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="prgStateIdentifierListView" layoutX="644.0" layoutY="520.0" prefHeight="155.0" prefWidth="181.0" />
+      <Label layoutX="402.0" layoutY="552.0" text="SymTbl">
+         <font>
+            <Font name="Roboto Light" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="symTableView" layoutX="337.0" layoutY="590.0" prefHeight="155.0" prefWidth="181.0">
+        <columns>
+          <TableColumn fx:id="varnameSymColumn" prefWidth="89.0" text="Var name" />
+          <TableColumn fx:id="valueSymColumn" prefWidth="91.0" text="Value" />
+        </columns>
+      </TableView>
+      <Label layoutX="810.0" layoutY="157.0" text="Exe Stack">
+         <font>
+            <Font name="Roboto Light" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="exeStackListView" layoutX="555.0" layoutY="202.0" prefHeight="170.0" prefWidth="576.0" />
+      <Button fx:id="runButton" layoutX="877.0" layoutY="552.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="120.0" text="Run one step" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="16.0" />
+         </font></Button>
+      <Label layoutX="361.0" layoutY="41.0" text="Latch Table">
+         <font>
+            <Font name="Roboto Light" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
